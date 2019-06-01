@@ -37,6 +37,12 @@ public class CustomerController {
         //return new Customer("abc","sdskd","as@gmail.com");
     }
 
+    @PatchMapping("/customers/{custid}")
+    public void updateCustomer(@RequestBody Customer cust,@PathVariable int custid)
+    {
+        customerservice.updatecustomer(cust,custid);
+    }
+
 
 
 }
