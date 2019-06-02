@@ -1,8 +1,8 @@
-package com.eommerce.service.Admin.DAO;
+package com.ecommerce.service.Admin.DAO;
 
-import com.eommerce.service.Admin.Model.Category;
-import com.eommerce.service.Admin.Model.Product;
-import com.eommerce.service.Admin.Model.Subcategory;
+import com.ecommerce.service.Admin.Model.Subcategory;
+import com.ecommerce.service.Admin.Model.Category;
+import com.ecommerce.service.Admin.Model.Product;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -15,7 +15,7 @@ import java.util.List;
 public class SubcatProductService {
 
     public List<Product> getProducts(int subcatid){
-        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\eommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
+        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\ecommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
         Session session=factory.getCurrentSession();
         session.beginTransaction();
         Subcategory temp=session.get(Subcategory.class,subcatid);
@@ -29,7 +29,7 @@ public class SubcatProductService {
     }
 
     public void addProduct(Product product,int subcatid){
-        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\eommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
+        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\ecommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
         Session session=factory.getCurrentSession();
         session.beginTransaction();
         Subcategory temp=session.get(Subcategory.class,subcatid);
@@ -40,7 +40,7 @@ public class SubcatProductService {
     }
 
     public void updateProduct(Product product,int prodid){
-        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\eommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
+        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\ecommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
         Session session=factory.getCurrentSession();
         session.beginTransaction();
         Product temp=session.get(Product.class,prodid);
@@ -50,7 +50,7 @@ public class SubcatProductService {
     }
 
     public void deleteProduct(int prodid){
-        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\eommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
+        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\ecommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
         Session session=factory.getCurrentSession();
         session.beginTransaction();
         Product temp=session.get(Product.class,prodid);

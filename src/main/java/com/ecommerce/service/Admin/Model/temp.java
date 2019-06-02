@@ -1,4 +1,4 @@
-package com.eommerce.service.Admin.Model;
+package com.ecommerce.service.Admin.Model;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

@@ -1,7 +1,7 @@
-package com.eommerce.service.Admin.Controller;
+package com.ecommerce.service.Admin.Controller;
 
-import com.eommerce.service.Admin.DAO.CategoryService;
-import com.eommerce.service.Admin.Model.Category;
+import com.ecommerce.service.Admin.DAO.CategoryService;
+import com.ecommerce.service.Admin.Model.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.ecommerce.service;
+package com.ecommerce.service.user;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

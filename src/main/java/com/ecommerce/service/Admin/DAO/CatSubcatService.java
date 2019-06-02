@@ -1,8 +1,8 @@
-package com.eommerce.service.Admin.DAO;
+package com.ecommerce.service.Admin.DAO;
 
-import com.eommerce.service.Admin.Model.Category;
-import com.eommerce.service.Admin.Model.Product;
-import com.eommerce.service.Admin.Model.Subcategory;
+import com.ecommerce.service.Admin.Model.Subcategory;
+import com.ecommerce.service.Admin.Model.Category;
+import com.ecommerce.service.Admin.Model.Product;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -15,7 +15,7 @@ import java.util.List;
 public class CatSubcatService {
 
     public List<Subcategory> getSubcat(int id){
-        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\eommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
+        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\ecommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
         Session session=factory.getCurrentSession();
         session.beginTransaction();
         Category temp=session.get(Category.class,id);
@@ -30,7 +30,7 @@ public class CatSubcatService {
     }
 
     public void addSubCat(Subcategory subcategory,int id){
-        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\eommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
+        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\ecommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
         Session session=factory.getCurrentSession();
         session.beginTransaction();
         Subcategory subtemp=new Subcategory(subcategory.getSubcatname());
@@ -41,7 +41,7 @@ public class CatSubcatService {
     }
 
     public void deleteSubCat(int subcatid){
-        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\eommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
+        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\ecommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
         Session session=factory.getCurrentSession();
         session.beginTransaction();
         Subcategory temp=session.get(Subcategory.class,subcatid);
@@ -51,7 +51,7 @@ public class CatSubcatService {
     }
 
     public  void updateSubCat(Subcategory subcategory,int subcatid){
-        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\eommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
+        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\ecommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
         Session session=factory.getCurrentSession();
         session.beginTransaction();
         Subcategory temp =session.get(Subcategory.class,subcatid);
