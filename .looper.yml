@@ -4,7 +4,7 @@ tools:
  
 flows:
   default:
-    shell: echo "Hello spring! tttt"
-    shell: java -version
-    shell: echo "checking done"
-    shell: mvn -v
+  - shell: echo "Hello spring! tttt"
+  - shell: java -version
+  - shell: echo "checking done"
+  - shell: mvn -v
