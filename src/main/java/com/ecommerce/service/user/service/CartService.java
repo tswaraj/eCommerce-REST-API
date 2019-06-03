@@ -18,7 +18,7 @@ public class CartService {
 
     public Cart addcart(int cid , int pid){
         SessionFactory factory = new Configuration()
-                .configure(new File("C:\\Users\\a0a031y\\Downloads\\service\\src\\main\\java\\com\\ecommerce\\service\\hibernate.cfg.xml"))
+                .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Cart.class)
                 .buildSessionFactory();
 
@@ -37,7 +37,7 @@ public class CartService {
 
     public void deletecart(int cid , int pid){
         SessionFactory factory = new Configuration()
-                .configure(new File("C:\\Users\\a0a031y\\Downloads\\service\\src\\main\\java\\com\\ecommerce\\service\\hibernate.cfg.xml"))
+                .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Cart.class)
                 .buildSessionFactory();
 
@@ -60,7 +60,7 @@ public class CartService {
 
     public List<Product> getcartprod(int userid){
         SessionFactory factory = new Configuration()
-                .configure(new File("C:\\Users\\a0a031y\\Downloads\\service\\src\\main\\java\\com\\ecommerce\\service\\hibernate.cfg.xml"))
+                .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Cart.class)
                 .addAnnotatedClass(Product.class)
                 .buildSessionFactory();

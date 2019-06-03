@@ -13,7 +13,7 @@ public class CreateProduct {
     public  static void main(String[] args)
     {
         SessionFactory factory = new Configuration()
-                .configure(new File("C:\\Users\\a0a031y\\Downloads\\service\\src\\main\\java\\com\\ecommerce\\service\\hibernate.cfg.xml"))
+                .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Product.class)
                 .buildSessionFactory();
 

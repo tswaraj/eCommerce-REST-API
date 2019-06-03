@@ -15,7 +15,7 @@ import java.util.List;
 public class SubcatProductService {
 
     public List<Product> getProducts(int subcatid){
-        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\ecommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
+        SessionFactory factory=new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
         Session session=factory.getCurrentSession();
         session.beginTransaction();
         Subcategory temp=session.get(Subcategory.class,subcatid);
@@ -29,7 +29,7 @@ public class SubcatProductService {
     }
 
     public void addProduct(Product product,int subcatid){
-        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\ecommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
+        SessionFactory factory=new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
         Session session=factory.getCurrentSession();
         session.beginTransaction();
         Subcategory temp=session.get(Subcategory.class,subcatid);
@@ -40,17 +40,21 @@ public class SubcatProductService {
     }
 
     public void updateProduct(Product product,int prodid){
-        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\ecommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
+        SessionFactory factory=new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
         Session session=factory.getCurrentSession();
         session.beginTransaction();
         Product temp=session.get(Product.class,prodid);
-        temp.setProdname(product.getProdname());
-        temp.setQty(product.getQty());
+        if(product.getProdname()!=null){
+            temp.setProdname(product.getProdname());
+        }
+        if(product.getQty()!=0){
+            temp.setQty(product.getQty());
+        }
         session.getTransaction().commit();
     }
 
     public void deleteProduct(int prodid){
-        SessionFactory factory=new Configuration().configure(new File("C:\\Users\\s0t01vk\\Documents\\Projects\\service\\src\\main\\java\\com\\ecommerce\\service\\Admin\\hibernate.cfg.xml")).addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
+        SessionFactory factory=new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Category.class).addAnnotatedClass(Subcategory.class).addAnnotatedClass(Product.class).buildSessionFactory();
         Session session=factory.getCurrentSession();
         session.beginTransaction();
         Product temp=session.get(Product.class,prodid);

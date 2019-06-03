@@ -19,7 +19,7 @@ public class CustomerService {
 
             public Customer createcustomer(Customer cust){
                 SessionFactory factory = new Configuration()
-                        .configure(new File("C:\\Users\\a0a031y\\Downloads\\service\\src\\main\\java\\com\\ecommerce\\service\\hibernate.cfg.xml"))
+                        .configure("hibernate.cfg.xml")
                         .addAnnotatedClass(Customer.class)
                         .buildSessionFactory();
 
@@ -41,7 +41,7 @@ public class CustomerService {
 
         public Customer getcustomer ( int customerid){
             SessionFactory factory = new Configuration()
-                    .configure(new File("C:\\Users\\a0a031y\\Downloads\\service\\src\\main\\java\\com\\ecommerce\\service\\hibernate.cfg.xml"))
+                    .configure("hibernate.cfg.xml")
                     .addAnnotatedClass(Customer.class)
                     .buildSessionFactory();
 
@@ -61,7 +61,7 @@ public class CustomerService {
 
     public List<Customer> getallcust ( ){
         SessionFactory factory = new Configuration()
-                .configure(new File("C:\\Users\\a0a031y\\Downloads\\service\\src\\main\\java\\com\\ecommerce\\service\\hibernate.cfg.xml"))
+                .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Customer.class)
                 .buildSessionFactory();
 
@@ -81,7 +81,7 @@ public class CustomerService {
 
     public void updatecustomer(Customer customer ,int cusid){
         SessionFactory factory = new Configuration()
-                .configure(new File("C:\\Users\\a0a031y\\Downloads\\service\\src\\main\\java\\com\\ecommerce\\service\\hibernate.cfg.xml"))
+                .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Customer.class)
                 .buildSessionFactory();
 
