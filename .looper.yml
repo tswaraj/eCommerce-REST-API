@@ -18,7 +18,7 @@ flows:
     - shell(name Python check): python --version
 
   build:
-    -echo "build TBD"
+    - echo "build TBD"
 
   notify:
     - echo "notify tbd"
