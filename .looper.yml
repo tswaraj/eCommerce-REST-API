@@ -15,7 +15,7 @@ flows:
   versions:
     - shell(name JDK version): java -version
     - (name Maven version) mvn -v
-    - shell Python check: python --version
+    - shell(Python check): python --version
 
   build:
     -echo "build TBD"
