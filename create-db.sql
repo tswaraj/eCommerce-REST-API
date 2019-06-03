@@ -48,7 +48,7 @@ CREATE TABLE customer (
  username varchar(128) DEFAULT NULL,
  password varchar(45) DEFAULT NULL,
  email varchar(45) DEFAULT NULL,
- PRIMARY KEY (id)
+ PRIMARY KEY (id),
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
