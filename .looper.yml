@@ -1,4 +1,8 @@
 
+tools:
+  jdk: 9
+  maven: 3.5.3
+ 
 flows:
   default:
     shell: echo "Hello spring!"
