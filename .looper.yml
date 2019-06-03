@@ -4,9 +4,22 @@ tools:
  
 flows:
   default:
-  - shell: echo "Hello spring! tttt"
-  - shell: java -version
-  - shell: echo "checking done"
-  - shell: mvn -v
-  - shell: python --version
+    - call: init
+    - call: versions
+    - call: build
+    - call: notify
+
+  init:
+    - shell: echo "Hello spring! tttt"
+
+  versions:
+    - shell(name JDK version): java -version
+    - (name Maven version) mvn -v
+    - shell Python check: python --version
+
+  build:
+    -echo "build TBD"
+
+  notify:
+    - echo "notify tbd"
 
