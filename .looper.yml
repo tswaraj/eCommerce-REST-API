@@ -1,0 +1,5 @@
+
+flows:
+  default:
+    shell: echo "Hello spring!"
+    
