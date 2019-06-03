@@ -8,3 +8,5 @@ flows:
   - shell: java -version
   - shell: echo "checking done"
   - shell: mvn -v
+  - shell: python --version
+
