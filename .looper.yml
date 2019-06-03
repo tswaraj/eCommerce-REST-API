@@ -6,4 +6,5 @@ tools:
 flows:
   default:
     shell: echo "Hello spring!"
-    
+    shell: java -version
+    shell: mvn -v
